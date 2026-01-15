@@ -187,9 +187,6 @@ jobs:
             echo "RECOVERY_TYPE=vendor_boot" >> $GITHUB_ENV
             echo "vendor_boot.img file found!"
             echo "MD5_IMG=$(md5sum out/target/product/${{ github.event.inputs.DEVICE_NAME }}/vendor_boot.img | cut -d ' ' -f 1)" >> $GITHUB_ENV
-        else
-            echo "No Recovery file found!"
-            cd exit
         fi
 
     - name: Include Recovery Installer
